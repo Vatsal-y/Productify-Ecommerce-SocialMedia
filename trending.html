@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trending</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #15202b;
+      color: #fff;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-gap: 30px;
+    }
+
+    .trend {
+      background-color: #1da1f2;
+      border-radius: 10px;
+      padding: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+      transition: transform 0.3s ease;
+      text-align: center;
+    }
+
+    .trend:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+    }
+
+    .trend-image {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin: 0 auto 20px;
+    }
+
+    .trend-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .trend-content h2 {
+      font-size: 24px;
+      margin-top: 0;
+      margin-bottom: 10px;
+    }
+
+    .trend-content p {
+      font-size: 16px;
+      margin: 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="trend">
+      <div class="trend-image">
+        <img src="image/tech.jpg">
+      </div>
+      <div class="trend-content">
+        <h2>#TechTrends</h2>
+        <p>Explore the latest innovations and discussions in the tech world.</p>
+      </div>
+    </div>
+
+    <div class="trend">
+        <div class="trend-image">
+          <img src="image/jersey.jpeg">
+        </div>
+        <div class="trend-content">
+          <h2>#Sports Jerseys</h2>
+          <p>Catch the best of jerseys of your favourite players at only single stop.</p>
+        </div>
+      </div>
+
+    <div class="trend">
+      <div class="trend-image">
+        <img src="image/augreal.jpeg">
+      </div>
+      <div class="trend-content">
+        <h2>#Augmented Reality (AR) Shopping</h2>
+        <p>Integrate AR features that allow users to virtually try on products or see how they look in their space before making a purchase. AR can enhance the shopping experience and increase engagement.</p>
+      </div>
+    </div>
+
+    <div class="trend">
+        <div class="trend-image">
+          <img src="image/gaming.jpeg">
+        </div>
+        <div class="trend-content">
+          <h2>#Gamification</h2>
+          <p>Incorporate gamification elements such as loyalty programs, challenges, or interactive quizzes to engage users and incentivize purchases. Gamified experiences can make shopping more enjoyable and encourage repeat visits.</p>
+        </div>
+      </div>
+
+      <div class="trend">
+        <div class="trend-image">
+          <img src="image/FIFA-Mobile-Logo-Vector-01.jpg">
+        </div>
+        <div class="trend-content">
+          <h2>#FIFA Mobile</h2>
+          <p>Catch the latest updates on fifa mobile.</p>
+        </div>
+      </div>
+
+    <div class="trend">
+      <div class="trend-image">
+        <img src="image/rubiksqr.jpg">
+      </div>
+      <div class="trend-content">
+        <h2>#Multidimensional Lighting Cube</h2>
+        <p>Try the latest product which is on a roll sice past 48 hours.</p>
+      </div>
+    </div>
+ 
+
+
+</div>
+</body>
+</html>

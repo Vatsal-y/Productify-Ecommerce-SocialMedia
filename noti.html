@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notifications</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .section {
+            margin-bottom: 40px;
+        }
+
+        .section-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title i {
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        .notification-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 20px;
+        }
+
+        .notification-card {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            transition: transform 0.3s ease;
+        }
+
+        .notification-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .notification-card img {
+            max-width: 80px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 8px;
+            margin-right: 20px;
+        }
+
+        .notification-card h3 {
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+
+        .notification-card p {
+            color: #666;
+            margin-bottom: 10px;
+        }
+
+        .notification-card .cta-btn {
+            display: inline-block;
+            background-color: #333;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 4px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .notification-card .cta-btn:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Notifications</h1>
+    </header>
+
+    <div class="container">
+        <div class="section">
+            <h2 class="section-title"><i class="fas fa-bullhorn"></i> New Product Ads</h2>
+            <div class="notification-grid">
+                <div class="notification-card">
+                    <img src="image/hanging-light-vectors-ai.jpg">
+                    <div>
+                        <h3>AI Controlled CFC Hanging Lights</h3>
+                        <p>Check out this new product that might interest you.</p>
+                        
+                    </div>
+                </div>
+                <!-- Add more product ad cards here -->
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title"><i class="fas fa-tag"></i> Sale Alerts</h2>
+            <div class="notification-grid">
+                <div class="notification-card">
+                    <img src="image/ikea.jpg">
+                    <div>
+                        <h3>IKEA</h3>
+                        <p>Get 20% off on any product of IKEA for a limited time!</p>
+                        
+                    </div>
+                </div>
+                <!-- Add more sale alert cards here -->
+            </div>
+        </div>
+
+        <div class="section">
+            <h2 class="section-title"><i class="fas fa-star"></i> Recommended Products</h2>
+            <div class="notification-grid">
+                <div class="notification-card">
+                    <img src="image/study_table.jpeg">
+                    <div>
+                        <h3>Smart study Lamp with Virtual Assistant</h3>
+                        <p>Based on your interests, we think you'll love this product.</p>
+                        
+                    </div>
+                </div>
+                <!-- Add more recommended product cards here -->
+            </div>
+        </div>
+
+      
+
+        <div class="section">
+            <h2 class="section-title"><i class="fas fa-comments"></i> Social Interactions</h2>
+            <div class="notification-grid">
+                <div class="notification-card">
+                    <img src="image/man-ai-8068201_960_720.jpg">
+                    <div>
+                        <h3>John King</h3>
+                        <p>Commented on your product post: "Thanks for your review!"</p>
+                        
+                    </div>
+                </div>
+                <!-- Add more social interaction cards here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/your-font-awesome-kit.js"></script>
+</body>
+</html>

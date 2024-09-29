@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopping Cart</title>
+  <style>
+    /* CSS styles go here */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f5f5f5;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      display: flex;
+      align-items: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+
+    header img {
+      height: 30px;
+      margin-right: 10px;
+    }
+
+    .cart-items {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .cart-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .cart-item img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      margin-right: 20px;
+    }
+
+    .cart-item-details {
+      flex-grow: 1;
+    }
+
+    .cart-item-details h3 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .cart-item-details p {
+      margin: 5px 0;
+    }
+
+    .cart-item-quantity {
+      display: flex;
+      align-items: center;
+    }
+
+    .cart-item-quantity button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    .cart-item-quantity input {
+      width: 40px;
+      text-align: center;
+      margin: 0 10px;
+    }
+
+    .cart-item-remove {
+      background-color: #ff4d4d;
+      color: #fff;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+
+    .cart-summary {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .cart-summary h2 {
+      margin-top: 0;
+    }
+
+    .cart-summary p {
+      margin: 10px 0;
+    }
+
+    .cart-summary .total {
+      font-weight: bold;
+    }
+
+    .ai-recommendations {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .ai-recommendations h2 {
+      margin-top: 0;
+    }
+
+    .ai-recommendations .product {
+      display: flex;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .ai-recommendations .product img {
+      width: 80px;
+      height: 80px;
+      object-fit: cover;
+      margin-right: 20px;
+    }
+
+    .ai-recommendations .product h3 {
+      margin: 0;
+      font-size: 18px;
+    }
+
+    .ai-recommendations .product p {
+      margin: 5px 0;
+    }
+
+    .checkout-options {
+      max-width: 800px;
+      margin: 20px auto;
+      padding: 20px;
+      background-color: #fff;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      text-align: center;
+    }
+
+    .checkout-options button {
+      background-color: #333;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      margin: 10px;
+    }
+
+    .ai-chatbot {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background-color: #333;
+      color: #fff;
+      padding: 10px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .ai-chatbot h3 {
+      margin: 0;
+      font-size: 16px;
+    }
+
+    .ai-chatbot input {
+      width: 200px;
+      padding: 5px;
+      margin-top: 10px;
+    }
+
+    .ai-chatbot button {
+      background-color: #fff;
+      color: #333;
+      border: none;
+      padding: 5px 10px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <img src="image/cart.png" alt="Cart Icon">
+    <h1>My Cart</h1>
+  </header>
+
+  <div class="cart-items">
+    <div class="cart-item">
+      <img src="image/chair.jpeg" alt="Product 1">
+      <div class="cart-item-details">
+        <h3>Product 1</h3>
+        <p>Price: $19.99</p>
+        <div class="cart-item-quantity">
+          <button>-</button>
+          <input type="number" value="1">
+          <button>+</button>
+        </div>
+        <p>Subtotal: $19.99</p>
+        <button class="cart-item-remove">Remove</button>
+      </div>
+    </div>
+    <!-- Add more cart items here -->
+  </div>
+
+  <div class="cart-summary">
+    <h2>Cart Summary</h2>
+    <p>Subtotal: $19.99</p>
+    <p>Tax: $1.60</p>
+    <p>Shipping: $5.00</p>
+    <p class="total">Total: $26.59</p>
+  </div>
+
+  <div class="ai-recommendations">
+    <h2>Recommendations</h2>
+    <div class="product">
+      <img src="image/j.jpg" alt="Recommended Product 1">
+      <div>
+        <h3>Recommended Product 1</h3>
+        <p>Price: $24.99</p>
+        <button>Add to Cart</button>
+      </div>
+    </div>
+    <!-- Add more recommended products here -->
+  </div>
+
+  <div class="checkout-options">
+    <a href="purchase.html">
+    <button>Proceed to Checkout</button></a>
+    <a href="index.html">
+    <button>Continue Shopping</button></a>
+  </div>
+
+  <div class="ai-chatbot">
+    <h3>Our team</h3>
+    <input type="text" placeholder="Ask a question...">
+    <button>Send</button>
+  </div>
+
+  <script>
+    // JavaScript code goes here
+    const quantityButtons = document.querySelectorAll('.cart-item-quantity button');
+    const quantityInputs = document.querySelectorAll('.cart-item-quantity input');
+    const removeButtons = document.querySelectorAll('.cart-item-remove');
+
+    quantityButtons.forEach((button, index) => {
+      button.addEventListener('click', () => {
+        const input = quantityInputs[index];
+        let quantity = parseInt(input.value);
+        if (button.textContent === '+') {
+          quantity++;
+        } else {
+          quantity = Math.max(1, quantity - 1);
+        }
+        input.value = quantity;
+        // Update subtotal calculation here
+      });
+    });
+
+    removeButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const cartItem = button.parentNode.parentNode;
+        cartItem.remove();
+        // Update cart summary and total calculation here
+      });
+    });
+  </script>
+</body>
+</html>
